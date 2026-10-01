@@ -1,0 +1,8 @@
+# Production overrides: more conservative restarts and a bigger connection pool.
+services:
+  api:
+    restart: unless-stopped
+    environment:
+      POOL_SIZE: "10"
+  web:
+    restart: unless-stopped
